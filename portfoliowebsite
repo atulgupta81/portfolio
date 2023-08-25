@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background: linear-gradient(45deg, rgb(255, 77, 0), rgb(255, 77, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10%;
+
+}
+
+.home-content {
+
+    max-width: 500px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.2;
+
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home-content {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.btn {
+    display: inline-flex;
+    width: 180px;
+    height: 48px;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, rgb(255, 77, 0), rgb(249, 254, 255), rgb(36, 26, 126));
+    z-index: -1;
+    border-radius: 40px;
+    background-size: 200%;
+    background-position: 0 0;
+    transition: 0.5s ease;
+
+}
+
+.btn:hover::before {
+    background-position: 100% 0;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, rgb(255, 77, 0), rgb(255, 77, 0), rgb(36, 26, 126));
+    z-index: -1;
+    border-radius: 40px;
+    background-size: 200%;
+    background-position: 0 0;
+    transition: 0.5s ease;
+    filter: blur(5px)
+}
+
+.btn:hover::after {
+    background-position: 100% 0;
+}
+
+.home-img {
+    width: 410px;
+    height: 410px;
+
+}
+
+.home-img .glowing-square {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0, 0, 0), rgb(255, 77, 0));
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home-img .glowing-square::after {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: rgb(0, 0, 0);
+    border-radius: 10%;
+
+
+}
+
+.glowing-square .image {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+
+
+}
+
+.image img {
+    max-width: 500px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 26%;
+    right: 11%
+}
+
+.about {
+    background-color: rgb(42, 41, 40);
+}
+
+.about h2 {
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color:orangered;
+    
+}
+
+.about h5 {
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+.about p {
+    margin-left: 10%;
+}
+.about a{
+    margin-left: 10%;
+    margin-top: 4%;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+
+</head>
+<link rel="stylesheet" href="portfolio.css">
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">portfolio</a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">about</a>
+            <a href="#">Skills</a>
+            <a href="#">portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-sci">
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+        </div>
+        <div class="home-content">
+            <h1>Hi, I'm Alex</h1><br>
+            <h3>Frontend Developer</h3><br>
+            <p>My expertise is to create website design, graphic design and many more...
+            </p>
+            <br>
+            <a href="#" class="btn">more about me</a>
+        </div>
+
+        <div class="home-img">
+            <div class="glowing-square"></div>
+            <span></span>
+            <span></span>
+            <div class="image">
+                <img src="man.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="man.png">
+        </div>
+        <div class="about-text">
+            <h2>About Me</h2><br>
+            <h5>I am Dynamic Creative Designer <span>Photographer and Developer</span></h5><br>
+            <p>"Hello, I'm a passionate frontend developer dedicated to crafting captivating user experiences. With a keen eye for design and a love for clean, efficient code, I transform ideas into pixel-perfect realities. From responsive layouts to interactive elements, I thrive on the challenge of bringing creativity to life in the digital world. Let's collaborate and build the next generation of web experiences together!"</p>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
